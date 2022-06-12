@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MetaChat</title>
+    <link rel="icon" href="/img/favicon.jpg">
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
+  <body>
+
+    <div class="chat">
+        <div id="sidebar" class="chat__sidebar">
+          <div class="room-user">
+            <header class="chat-header">
+              <h1><i class="fas fa-smile"></i>MetaChat </h1>
+            </header>
+            <h3 id="room-name">
+
+            </h3>
+            <center><h3 ><i class="fas fa-users"></i> Users : </h3></center>
+            <ul id="users">
+              
+            </ul>
+          </div>
+        </div>
+        <div class="chat__main">
+            <div id="messages" class="chat__messages">
+
+            </div>
+            <div class="compose"> 
+              <form id="SendMessage">
+                <input name="message" type="text" placeholder="Message" required autocomplete="off"/>
+                <button type="submit">Send</button>
+              </form>
+              <a href="index.html">
+                <button>Leave Room</button>
+              </a>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/18a53a4440.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.5/qs.min.js" integrity="sha512-JduLFfiB5t9F2dYayaCCWObe/SeciiMhX2MHAKGvQ22crUA/Sb1l4elG5A7r7Bu1tP2rs1cU5lR1Irx/govVdg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/chat.js"></script>
+  </body>
+</html>
