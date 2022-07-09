@@ -23,8 +23,8 @@ function userLeave(id){
 }
 
 // Get Room users 
-function getRoomUsers(room,name){
-    return users.filter(user => (user.room == room && user.username !=name));
+function getRoomUsers(room){
+    return users.filter(user => (user.room == room ));
 }
 
 module.exports = {userJoin,getCurrentUser, userLeave, getRoomUsers};

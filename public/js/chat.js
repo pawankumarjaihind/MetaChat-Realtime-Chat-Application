@@ -16,9 +16,8 @@ const socket = io();
 socket.emit('joinRoom', {username, room});
 
 // Get room and users
-socket.on('roomUsers',({room,user,users})=>{
+socket.on('roomUsers',({room,users})=>{
   outputRoomName(room);
-  outputUserName(user);
   outputUsers(users);
 });
 
@@ -155,11 +154,6 @@ function outputMessage3(message){
 // Add room name to DOM 
 function outputRoomName(room){
   roomName.innerText = "Room Name : " + room;
-}
-
-// Add user name to DOM 
-function outputUserName(user){
-  userName.innerText = "User Name : " + user;
 }
 
 // Add users to DOM 
