@@ -4,7 +4,7 @@ function formatMessage(username,text) {
     return {
         username,
         text,
-        time : moment().format('YYYY-MM-DD HH:mm')
+        time : moment().local().format('YYYY-MM-DD HH:mm')
     };
 }
 module.exports = formatMessage;
