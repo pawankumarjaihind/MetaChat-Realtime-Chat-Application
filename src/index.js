@@ -57,6 +57,7 @@ io.on("connection", (socket)=>{
      socket.on('sendmessage',message =>{
         const user = getCurrentUser(socket.id);
         const messages = new Msg({name:user.username, room : user.room , message});
+        
         messages.save().then(()=>{
             io.to(user.room).emit('message',formatMessage(user.username, message));
         });
